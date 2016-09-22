@@ -1,0 +1,20 @@
+
+**** Build of configuration Debug for project FreeRTOS82_TM4C1294_Base ****
+
+"C:\\TI_CodeComposer\\ccsv6\\utils\\bin\\gmake" -k all 
+'Building file: ../Tasks/Magnetometer.c'
+'Invoking: ARM Compiler'
+"C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/EECS workspace/EECS690 - ADV embedded systems/Project02 - 3Axis Magnetometer sensor/TI_ARM_Tiva_Projects/FreeRTOS82_TM4C1294_Base" --include_path="C:/EECS workspace/EECS690 - ADV embedded systems/Project02 - 3Axis Magnetometer sensor/TI_ARM_Tiva_Projects/FreeRTOS82_TM4C1294_Base/Drivers" --include_path="C:/EECS workspace/EECS690 - ADV embedded systems/Project02 - 3Axis Magnetometer sensor/TI_ARM_Tiva_Projects/Source/portable/CCS/ARM_CM4F" --include_path="C:/EECS workspace/EECS690 - ADV embedded systems/Project02 - 3Axis Magnetometer sensor/TI_ARM_Tiva_Projects/Source/include" --include_path="C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" --include_path="C:/TI_CodeComposer/TivaWare" -g --gcc --define=ccs="ccs" --define=PART_TM4C1294NCPDT --super_quiet --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --printf_support=full -k --asm_listing --preproc_with_compile --preproc_dependency="Tasks/Magnetometer.d" --obj_directory="Tasks"  "../Tasks/Magnetometer.c"
+
+>> Compilation failure
+Tasks/subdir_rules.mk:7: recipe for target 'Tasks/Magnetometer.obj' failed
+"../Tasks/Magnetometer.c", line 24: error #20: identifier "tI2CMInstance" is undefined
+"../Tasks/Magnetometer.c", line 30: error #66: expected a ";"
+"../Tasks/Magnetometer.c", line 73: warning #12-D: parsing restarts here after previous syntax error
+"../Tasks/Magnetometer.c", line 74: error #171: expected a declaration
+At end of source: warning #12-D: parsing restarts here after previous syntax error
+3 errors detected in the compilation of "../Tasks/Magnetometer.c".
+gmake: *** [Tasks/Magnetometer.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
