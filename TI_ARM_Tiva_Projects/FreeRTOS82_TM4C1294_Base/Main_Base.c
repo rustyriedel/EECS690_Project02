@@ -24,15 +24,18 @@
 
 #include	<stdio.h>
 
-extern void Task_Blink_LED_D1( void *pvParameters );
-extern void Task_ReportTime( void *pvParameters );
-extern void Task_ReportData( void *pvParameters );
-extern void Task_Magnetometer( void *pvParameters );
+extern void Task_Blink_LED_D1(void *pvParameters);
+extern void Task_ReportTime(void *pvParameters);
+extern void Task_ReportData(void *pvParameters);
+/**
+ * Forward declare the task as global (extern)
+ * @Alexander Kimani
+ */
+extern void Task_TimeOfDay(void *pvParameters);
 
+int main(void) {
 
-int main( void ) {
-
-	uint32_t	Status;
+	uint32_t Status;
 
 	Status = Processor_Initialization();
 	Status = UART_Initialization();
@@ -40,28 +43,32 @@ int main( void ) {
 	//
 	//	Create a task to blink LED
 	//
-	xTaskCreate( Task_Blink_LED_D1, "Blinky", 128, NULL, 1, NULL );
-	
+	xTaskCreate(Task_Blink_LED_D1, "Blinky", 128, NULL, 1, NULL);
+
 	//
 	//	Create a task to report data.
 	//
-	xTaskCreate( Task_ReportData, "ReportData", 512, NULL, 1, NULL );
+	xTaskCreate(Task_ReportData, "ReportData", 512, NULL, 1, NULL);
 
 	//
 	//	Create a task to report SysTickCount
 	//
-	xTaskCreate( Task_ReportTime, "ReportTime", 512, NULL, 1, NULL );
+	xTaskCreate(Task_ReportTime, "ReportTime", 512, NULL, 1, NULL);
 
-	xTaskCreate( Task_Magnetometer, "Magnetometer", 512, NULL, 1, NULL );
+	/**
+	 * Create a task to show time of day
+	 *
+	 */
+	xTaskCreate(Task_TimeOfDay, "TimeOfDay", 512, NULL, 1, NULL);
 
-	UARTprintf( "FreeRTOS Starting!\n" );
+	UARTprintf("FreeRTOS Starting!\n");
 
 	//
 	//	Start FreeRTOS Task Scheduler
 	//
 	vTaskStartScheduler();
 
-	while ( 1 ) {
+	while (1) {
 
 	}
 
