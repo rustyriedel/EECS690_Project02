@@ -4,7 +4,7 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS
+CG_TOOL_ROOT := C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
@@ -166,13 +166,13 @@ all: FreeRTOS82_TM4C1294_Base.out secondary-outputs
 FreeRTOS82_TM4C1294_Base.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: ARM Linker'
-	"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -g --gcc --define=ccs="ccs" --define=PART_TM4C1294NCPDT --super_quiet --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --printf_support=full -k --asm_listing -z -m"FreeRTOS82_TM4C1294_Base.map" --stack_size=0x0800 --heap_size=0x0800 -i"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/lib" -i"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --reread_libs --diag_wrap=off --warn_sections --display_error_number --xml_link_info="FreeRTOS82_TM4C1294_Base_linkInfo.xml" --rom_model -o "FreeRTOS82_TM4C1294_Base.out" $(ORDERED_OBJS)
+	"C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -g --gcc --define=ccs="ccs" --define=PART_TM4C1294NCPDT --super_quiet --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --printf_support=full -k --asm_listing -z -m"FreeRTOS82_TM4C1294_Base.map" --stack_size=0x0800 --heap_size=0x0800 -i"C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/lib" -i"C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include" --reread_libs --warn_sections --diag_wrap=off --display_error_number --xml_link_info="FreeRTOS82_TM4C1294_Base_linkInfo.xml" --rom_model -o "FreeRTOS82_TM4C1294_Base.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 FreeRTOS82_TM4C1294_Base.hex: $(EXE_OUTPUTS)
 	@echo 'Invoking: ARM Hex Utility'
-	"C:/ti/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armhex"  -o "FreeRTOS82_TM4C1294_Base.hex" $(EXE_OUTPUTS__QUOTED)
+	"C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/bin/armhex"  -o "FreeRTOS82_TM4C1294_Base.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $@'
 	@echo ' '
 

@@ -9,6 +9,9 @@ Tasks/Magnetometer.obj: C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12
 Tasks/Magnetometer.obj: C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include/stdbool.h
 Tasks/Magnetometer.obj: C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include/stdint.h
 Tasks/Magnetometer.obj: C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include/stdarg.h
+Tasks/Magnetometer.obj: C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include/stdio.h
+Tasks/Magnetometer.obj: C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include/linkage.h
+Tasks/Magnetometer.obj: C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include/stdarg.h
 Tasks/Magnetometer.obj: C:/TI_CodeComposer/TivaWare/driverlib/sysctl.h
 Tasks/Magnetometer.obj: C:/TI_CodeComposer/TivaWare/driverlib/pin_map.h
 Tasks/Magnetometer.obj: C:/TI_CodeComposer/TivaWare/driverlib/gpio.h
@@ -39,6 +42,11 @@ Tasks/Magnetometer.obj: C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12
 Tasks/Magnetometer.obj: C:/TI_CodeComposer/TivaWare/sensorlib/i2cm_drv.h
 Tasks/Magnetometer.obj: C:/TI_CodeComposer/TivaWare/sensorlib/ak8975.h
 Tasks/Magnetometer.obj: C:/TI_CodeComposer/TivaWare/sensorlib/mpu9150.h
+Tasks/Magnetometer.obj: C:/TI_ARM_Tiva_Projects/Proj2_Magnetometer/Tasks/Task_ReportData.h
+Tasks/Magnetometer.obj: C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include/stddef.h
+Tasks/Magnetometer.obj: C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include/stdarg.h
+Tasks/Magnetometer.obj: C:/TI_CodeComposer/TivaWare/utils/uartstdio.h
+Tasks/Magnetometer.obj: ../Tasks/Magnetometer.h
 
 ../Tasks/Magnetometer.c: 
 C:/TI_CodeComposer/TivaWare/inc/hw_ints.h: 
@@ -48,6 +56,9 @@ C:/TI_CodeComposer/TivaWare/inc/hw_uart.h:
 C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include/stddef.h: 
 C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include/stdbool.h: 
 C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include/stdint.h: 
+C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include/stdarg.h: 
+C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include/stdio.h: 
+C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include/linkage.h: 
 C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include/stdarg.h: 
 C:/TI_CodeComposer/TivaWare/driverlib/sysctl.h: 
 C:/TI_CodeComposer/TivaWare/driverlib/pin_map.h: 
@@ -79,3 +90,8 @@ C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include/stdarg.h:
 C:/TI_CodeComposer/TivaWare/sensorlib/i2cm_drv.h: 
 C:/TI_CodeComposer/TivaWare/sensorlib/ak8975.h: 
 C:/TI_CodeComposer/TivaWare/sensorlib/mpu9150.h: 
+C:/TI_ARM_Tiva_Projects/Proj2_Magnetometer/Tasks/Task_ReportData.h: 
+C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include/stddef.h: 
+C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include/stdarg.h: 
+C:/TI_CodeComposer/TivaWare/utils/uartstdio.h: 
+../Tasks/Magnetometer.h: 

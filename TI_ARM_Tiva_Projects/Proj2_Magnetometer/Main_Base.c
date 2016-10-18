@@ -22,12 +22,14 @@
 #include	"FreeRTOS.h"
 #include	"task.h"
 
+#include 	"Tasks/Magnetometer.h"
 #include	<stdio.h>
 
 extern void Task_Blink_LED_D1(void *pvParameters);
 extern void Task_ReportTime(void *pvParameters);
 extern void Task_ReportData(void *pvParameters);
 extern uint32_t I2C7_Initialization();
+extern bool isMPU9150Initialized = false;
 /**
  * Forward declare the task as global (extern)
  * @Alexander Kimani
@@ -54,7 +56,7 @@ int main(void) {
 	//
 	//	Create a task to report SysTickCount
 	//
-	xTaskCreate(Task_ReportTime, "ReportTime", 512, NULL, 1, NULL);
+	//xTaskCreate(Task_ReportTime, "ReportTime", 512, NULL, 1, NULL);
 
 	//
 	// Create a task to show time of day

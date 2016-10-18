@@ -1,6 +1,6 @@
 ;******************************************************************************
 ;* TI ARM C/C++ Codegen                                       PC v15.12.1.LTS *
-;* Date/Time created: Tue Oct 04 12:12:27 2016                                *
+;* Date/Time created: Tue Oct 18 11:21:26 2016                                *
 ;******************************************************************************
 	.compiler_opts --abi=eabi --arm_vmrs_si_workaround=off --code_state=16 --diag_wrap=off --disable_dual_state --embedded_constants=on --endian=little --float_support=FPv4SPD16 --hll_source=on --object_format=elf --quiet --silicon_version=7M4 --symdebug:dwarf --symdebug:dwarf_version=3 --unaligned_access=on 
 	.thumb
@@ -43,27 +43,16 @@ $C$DW$3	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$3, DW_AT_decl_column(0x0d)
 	.dwendtag $C$DW$3
 
-
-$C$DW$4	.dwtag  DW_TAG_subprogram
-	.dwattr $C$DW$4, DW_AT_name("I2C7_IntServiceRoutine")
-	.dwattr $C$DW$4, DW_AT_TI_symbol_name("I2C7_IntServiceRoutine")
-	.dwattr $C$DW$4, DW_AT_declaration
-	.dwattr $C$DW$4, DW_AT_external
-	.dwattr $C$DW$4, DW_AT_decl_file("../FreeRTOS_TM4C1294_Base_Startup.c")
-	.dwattr $C$DW$4, DW_AT_decl_line(0x3f)
-	.dwattr $C$DW$4, DW_AT_decl_column(0x0d)
-	.dwendtag $C$DW$4
-
 pulStack:	.usect	".bss:pulStack",256,4
 	.clink ".bss:pulStack"
-$C$DW$5	.dwtag  DW_TAG_variable
-	.dwattr $C$DW$5, DW_AT_name("pulStack")
-	.dwattr $C$DW$5, DW_AT_TI_symbol_name("pulStack")
-	.dwattr $C$DW$5, DW_AT_type(*$C$DW$T$47)
-	.dwattr $C$DW$5, DW_AT_location[DW_OP_addr pulStack]
-	.dwattr $C$DW$5, DW_AT_decl_file("../FreeRTOS_TM4C1294_Base_Startup.c")
-	.dwattr $C$DW$5, DW_AT_decl_line(0x4c)
-	.dwattr $C$DW$5, DW_AT_decl_column(0x16)
+$C$DW$4	.dwtag  DW_TAG_variable
+	.dwattr $C$DW$4, DW_AT_name("pulStack")
+	.dwattr $C$DW$4, DW_AT_TI_symbol_name("pulStack")
+	.dwattr $C$DW$4, DW_AT_type(*$C$DW$T$47)
+	.dwattr $C$DW$4, DW_AT_location[DW_OP_addr pulStack]
+	.dwattr $C$DW$4, DW_AT_decl_file("../FreeRTOS_TM4C1294_Base_Startup.c")
+	.dwattr $C$DW$4, DW_AT_decl_line(0x4c)
+	.dwattr $C$DW$4, DW_AT_decl_column(0x16)
 
 	.global	g_pfnVectors
 	.sect	".intvecs"
@@ -189,7 +178,7 @@ g_pfnVectors:
 	.bits	IntDefaultHandler,32		; g_pfnVectors[116] @ 3712
 	.bits	IntDefaultHandler,32		; g_pfnVectors[117] @ 3744
 	.bits	IntDefaultHandler,32		; g_pfnVectors[118] @ 3776
-	.bits	I2C7_IntServiceRoutine,32		; g_pfnVectors[119] @ 3808
+	.bits	IntDefaultHandler,32		; g_pfnVectors[119] @ 3808
 	.bits	IntDefaultHandler,32		; g_pfnVectors[120] @ 3840
 	.bits	IntDefaultHandler,32		; g_pfnVectors[121] @ 3872
 	.bits	IntDefaultHandler,32		; g_pfnVectors[122] @ 3904
@@ -199,36 +188,36 @@ g_pfnVectors:
 	.bits	IntDefaultHandler,32		; g_pfnVectors[126] @ 4032
 	.bits	IntDefaultHandler,32		; g_pfnVectors[127] @ 4064
 
-$C$DW$6	.dwtag  DW_TAG_variable
-	.dwattr $C$DW$6, DW_AT_name("g_pfnVectors")
-	.dwattr $C$DW$6, DW_AT_TI_symbol_name("g_pfnVectors")
-	.dwattr $C$DW$6, DW_AT_location[DW_OP_addr g_pfnVectors]
-	.dwattr $C$DW$6, DW_AT_type(*$C$DW$T$23)
-	.dwattr $C$DW$6, DW_AT_external
-	.dwattr $C$DW$6, DW_AT_decl_file("../FreeRTOS_TM4C1294_Base_Startup.c")
-	.dwattr $C$DW$6, DW_AT_decl_line(0x63)
-	.dwattr $C$DW$6, DW_AT_decl_column(0x0f)
+$C$DW$5	.dwtag  DW_TAG_variable
+	.dwattr $C$DW$5, DW_AT_name("g_pfnVectors")
+	.dwattr $C$DW$5, DW_AT_TI_symbol_name("g_pfnVectors")
+	.dwattr $C$DW$5, DW_AT_location[DW_OP_addr g_pfnVectors]
+	.dwattr $C$DW$5, DW_AT_type(*$C$DW$T$23)
+	.dwattr $C$DW$5, DW_AT_external
+	.dwattr $C$DW$5, DW_AT_decl_file("../FreeRTOS_TM4C1294_Base_Startup.c")
+	.dwattr $C$DW$5, DW_AT_decl_line(0x63)
+	.dwattr $C$DW$5, DW_AT_decl_column(0x0f)
 
-;	C:\TI_CodeComposer\ccsv6\tools\compiler\ti-cgt-arm_15.12.1.LTS\bin\armacpia.exe -@C:\\Users\\Rusty\\AppData\\Local\\Temp\\0666812 
+;	C:\TI_CodeComposer\ccsv6\tools\compiler\ti-cgt-arm_15.12.1.LTS\bin\armacpia.exe -@C:\\Users\\Rusty\\AppData\\Local\\Temp\\0382412 
 	.sect	".text"
 	.clink
 	.thumbfunc ResetISR
 	.thumb
 	.global	ResetISR
 
-$C$DW$7	.dwtag  DW_TAG_subprogram
-	.dwattr $C$DW$7, DW_AT_name("ResetISR")
-	.dwattr $C$DW$7, DW_AT_low_pc(ResetISR)
-	.dwattr $C$DW$7, DW_AT_high_pc(0x00)
-	.dwattr $C$DW$7, DW_AT_TI_symbol_name("ResetISR")
-	.dwattr $C$DW$7, DW_AT_external
-	.dwattr $C$DW$7, DW_AT_TI_begin_file("../FreeRTOS_TM4C1294_Base_Startup.c")
-	.dwattr $C$DW$7, DW_AT_TI_begin_line(0xf2)
-	.dwattr $C$DW$7, DW_AT_TI_begin_column(0x06)
-	.dwattr $C$DW$7, DW_AT_decl_file("../FreeRTOS_TM4C1294_Base_Startup.c")
-	.dwattr $C$DW$7, DW_AT_decl_line(0xf2)
-	.dwattr $C$DW$7, DW_AT_decl_column(0x06)
-	.dwattr $C$DW$7, DW_AT_TI_max_frame_size(0x00)
+$C$DW$6	.dwtag  DW_TAG_subprogram
+	.dwattr $C$DW$6, DW_AT_name("ResetISR")
+	.dwattr $C$DW$6, DW_AT_low_pc(ResetISR)
+	.dwattr $C$DW$6, DW_AT_high_pc(0x00)
+	.dwattr $C$DW$6, DW_AT_TI_symbol_name("ResetISR")
+	.dwattr $C$DW$6, DW_AT_external
+	.dwattr $C$DW$6, DW_AT_TI_begin_file("../FreeRTOS_TM4C1294_Base_Startup.c")
+	.dwattr $C$DW$6, DW_AT_TI_begin_line(0xf2)
+	.dwattr $C$DW$6, DW_AT_TI_begin_column(0x06)
+	.dwattr $C$DW$6, DW_AT_decl_file("../FreeRTOS_TM4C1294_Base_Startup.c")
+	.dwattr $C$DW$6, DW_AT_decl_line(0xf2)
+	.dwattr $C$DW$6, DW_AT_decl_column(0x06)
+	.dwattr $C$DW$6, DW_AT_TI_max_frame_size(0x00)
 	.dwpsn	file "../FreeRTOS_TM4C1294_Base_Startup.c",line 242,column 21,is_stmt,address ResetISR,isa 1
 
 	.dwfde $C$DW$CIE, ResetISR
@@ -247,35 +236,35 @@ ResetISR:
     .global _c_int00
     b.w     _c_int00
 	.dwpsn	file "../FreeRTOS_TM4C1294_Base_Startup.c",line 248,column 1,is_stmt,isa 1
-$C$DW$8	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$8, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$8, DW_AT_TI_return
+$C$DW$7	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$7, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$7, DW_AT_TI_return
 
         BX        LR                    ; [DPU_3_PIPE] 
         ; BRANCH OCCURS                  ; [] 
-	.dwattr $C$DW$7, DW_AT_TI_end_file("../FreeRTOS_TM4C1294_Base_Startup.c")
-	.dwattr $C$DW$7, DW_AT_TI_end_line(0xf8)
-	.dwattr $C$DW$7, DW_AT_TI_end_column(0x01)
+	.dwattr $C$DW$6, DW_AT_TI_end_file("../FreeRTOS_TM4C1294_Base_Startup.c")
+	.dwattr $C$DW$6, DW_AT_TI_end_line(0xf8)
+	.dwattr $C$DW$6, DW_AT_TI_end_column(0x01)
 	.dwendentry
-	.dwendtag $C$DW$7
+	.dwendtag $C$DW$6
 
 	.sect	".text"
 	.clink
 	.thumbfunc NmiSR
 	.thumb
 
-$C$DW$9	.dwtag  DW_TAG_subprogram
-	.dwattr $C$DW$9, DW_AT_name("NmiSR")
-	.dwattr $C$DW$9, DW_AT_low_pc(NmiSR)
-	.dwattr $C$DW$9, DW_AT_high_pc(0x00)
-	.dwattr $C$DW$9, DW_AT_TI_symbol_name("NmiSR")
-	.dwattr $C$DW$9, DW_AT_TI_begin_file("../FreeRTOS_TM4C1294_Base_Startup.c")
-	.dwattr $C$DW$9, DW_AT_TI_begin_line(0x101)
-	.dwattr $C$DW$9, DW_AT_TI_begin_column(0x0d)
-	.dwattr $C$DW$9, DW_AT_decl_file("../FreeRTOS_TM4C1294_Base_Startup.c")
-	.dwattr $C$DW$9, DW_AT_decl_line(0x101)
-	.dwattr $C$DW$9, DW_AT_decl_column(0x0d)
-	.dwattr $C$DW$9, DW_AT_TI_max_frame_size(0x00)
+$C$DW$8	.dwtag  DW_TAG_subprogram
+	.dwattr $C$DW$8, DW_AT_name("NmiSR")
+	.dwattr $C$DW$8, DW_AT_low_pc(NmiSR)
+	.dwattr $C$DW$8, DW_AT_high_pc(0x00)
+	.dwattr $C$DW$8, DW_AT_TI_symbol_name("NmiSR")
+	.dwattr $C$DW$8, DW_AT_TI_begin_file("../FreeRTOS_TM4C1294_Base_Startup.c")
+	.dwattr $C$DW$8, DW_AT_TI_begin_line(0x101)
+	.dwattr $C$DW$8, DW_AT_TI_begin_column(0x0d)
+	.dwattr $C$DW$8, DW_AT_decl_file("../FreeRTOS_TM4C1294_Base_Startup.c")
+	.dwattr $C$DW$8, DW_AT_decl_line(0x101)
+	.dwattr $C$DW$8, DW_AT_decl_column(0x0d)
+	.dwattr $C$DW$8, DW_AT_TI_max_frame_size(0x00)
 	.dwpsn	file "../FreeRTOS_TM4C1294_Base_Startup.c",line 257,column 25,is_stmt,address NmiSR,isa 1
 
 	.dwfde $C$DW$CIE, NmiSR
@@ -304,29 +293,29 @@ NmiSR:
         B         ||$C$L1||             ; [DPU_3_PIPE] |261| 
         ; BRANCH OCCURS {||$C$L1||}      ; [] |261| 
 ;* --------------------------------------------------------------------------*
-	.dwattr $C$DW$9, DW_AT_TI_end_file("../FreeRTOS_TM4C1294_Base_Startup.c")
-	.dwattr $C$DW$9, DW_AT_TI_end_line(0x107)
-	.dwattr $C$DW$9, DW_AT_TI_end_column(0x01)
+	.dwattr $C$DW$8, DW_AT_TI_end_file("../FreeRTOS_TM4C1294_Base_Startup.c")
+	.dwattr $C$DW$8, DW_AT_TI_end_line(0x107)
+	.dwattr $C$DW$8, DW_AT_TI_end_column(0x01)
 	.dwendentry
-	.dwendtag $C$DW$9
+	.dwendtag $C$DW$8
 
 	.sect	".text"
 	.clink
 	.thumbfunc FaultISR
 	.thumb
 
-$C$DW$10	.dwtag  DW_TAG_subprogram
-	.dwattr $C$DW$10, DW_AT_name("FaultISR")
-	.dwattr $C$DW$10, DW_AT_low_pc(FaultISR)
-	.dwattr $C$DW$10, DW_AT_high_pc(0x00)
-	.dwattr $C$DW$10, DW_AT_TI_symbol_name("FaultISR")
-	.dwattr $C$DW$10, DW_AT_TI_begin_file("../FreeRTOS_TM4C1294_Base_Startup.c")
-	.dwattr $C$DW$10, DW_AT_TI_begin_line(0x110)
-	.dwattr $C$DW$10, DW_AT_TI_begin_column(0x0d)
-	.dwattr $C$DW$10, DW_AT_decl_file("../FreeRTOS_TM4C1294_Base_Startup.c")
-	.dwattr $C$DW$10, DW_AT_decl_line(0x110)
-	.dwattr $C$DW$10, DW_AT_decl_column(0x0d)
-	.dwattr $C$DW$10, DW_AT_TI_max_frame_size(0x00)
+$C$DW$9	.dwtag  DW_TAG_subprogram
+	.dwattr $C$DW$9, DW_AT_name("FaultISR")
+	.dwattr $C$DW$9, DW_AT_low_pc(FaultISR)
+	.dwattr $C$DW$9, DW_AT_high_pc(0x00)
+	.dwattr $C$DW$9, DW_AT_TI_symbol_name("FaultISR")
+	.dwattr $C$DW$9, DW_AT_TI_begin_file("../FreeRTOS_TM4C1294_Base_Startup.c")
+	.dwattr $C$DW$9, DW_AT_TI_begin_line(0x110)
+	.dwattr $C$DW$9, DW_AT_TI_begin_column(0x0d)
+	.dwattr $C$DW$9, DW_AT_decl_file("../FreeRTOS_TM4C1294_Base_Startup.c")
+	.dwattr $C$DW$9, DW_AT_decl_line(0x110)
+	.dwattr $C$DW$9, DW_AT_decl_column(0x0d)
+	.dwattr $C$DW$9, DW_AT_TI_max_frame_size(0x00)
 	.dwpsn	file "../FreeRTOS_TM4C1294_Base_Startup.c",line 272,column 28,is_stmt,address FaultISR,isa 1
 
 	.dwfde $C$DW$CIE, FaultISR
@@ -355,29 +344,29 @@ FaultISR:
         B         ||$C$L2||             ; [DPU_3_PIPE] |281| 
         ; BRANCH OCCURS {||$C$L2||}      ; [] |281| 
 ;* --------------------------------------------------------------------------*
-	.dwattr $C$DW$10, DW_AT_TI_end_file("../FreeRTOS_TM4C1294_Base_Startup.c")
-	.dwattr $C$DW$10, DW_AT_TI_end_line(0x11b)
-	.dwattr $C$DW$10, DW_AT_TI_end_column(0x01)
+	.dwattr $C$DW$9, DW_AT_TI_end_file("../FreeRTOS_TM4C1294_Base_Startup.c")
+	.dwattr $C$DW$9, DW_AT_TI_end_line(0x11b)
+	.dwattr $C$DW$9, DW_AT_TI_end_column(0x01)
 	.dwendentry
-	.dwendtag $C$DW$10
+	.dwendtag $C$DW$9
 
 	.sect	".text"
 	.clink
 	.thumbfunc IntDefaultHandler
 	.thumb
 
-$C$DW$11	.dwtag  DW_TAG_subprogram
-	.dwattr $C$DW$11, DW_AT_name("IntDefaultHandler")
-	.dwattr $C$DW$11, DW_AT_low_pc(IntDefaultHandler)
-	.dwattr $C$DW$11, DW_AT_high_pc(0x00)
-	.dwattr $C$DW$11, DW_AT_TI_symbol_name("IntDefaultHandler")
-	.dwattr $C$DW$11, DW_AT_TI_begin_file("../FreeRTOS_TM4C1294_Base_Startup.c")
-	.dwattr $C$DW$11, DW_AT_TI_begin_line(0x124)
-	.dwattr $C$DW$11, DW_AT_TI_begin_column(0x0d)
-	.dwattr $C$DW$11, DW_AT_decl_file("../FreeRTOS_TM4C1294_Base_Startup.c")
-	.dwattr $C$DW$11, DW_AT_decl_line(0x124)
-	.dwattr $C$DW$11, DW_AT_decl_column(0x0d)
-	.dwattr $C$DW$11, DW_AT_TI_max_frame_size(0x00)
+$C$DW$10	.dwtag  DW_TAG_subprogram
+	.dwattr $C$DW$10, DW_AT_name("IntDefaultHandler")
+	.dwattr $C$DW$10, DW_AT_low_pc(IntDefaultHandler)
+	.dwattr $C$DW$10, DW_AT_high_pc(0x00)
+	.dwattr $C$DW$10, DW_AT_TI_symbol_name("IntDefaultHandler")
+	.dwattr $C$DW$10, DW_AT_TI_begin_file("../FreeRTOS_TM4C1294_Base_Startup.c")
+	.dwattr $C$DW$10, DW_AT_TI_begin_line(0x124)
+	.dwattr $C$DW$10, DW_AT_TI_begin_column(0x0d)
+	.dwattr $C$DW$10, DW_AT_decl_file("../FreeRTOS_TM4C1294_Base_Startup.c")
+	.dwattr $C$DW$10, DW_AT_decl_line(0x124)
+	.dwattr $C$DW$10, DW_AT_decl_column(0x0d)
+	.dwattr $C$DW$10, DW_AT_TI_max_frame_size(0x00)
 	.dwpsn	file "../FreeRTOS_TM4C1294_Base_Startup.c",line 292,column 37,is_stmt,address IntDefaultHandler,isa 1
 
 	.dwfde $C$DW$CIE, IntDefaultHandler
@@ -406,11 +395,11 @@ IntDefaultHandler:
         B         ||$C$L3||             ; [DPU_3_PIPE] |296| 
         ; BRANCH OCCURS {||$C$L3||}      ; [] |296| 
 ;* --------------------------------------------------------------------------*
-	.dwattr $C$DW$11, DW_AT_TI_end_file("../FreeRTOS_TM4C1294_Base_Startup.c")
-	.dwattr $C$DW$11, DW_AT_TI_end_line(0x12a)
-	.dwattr $C$DW$11, DW_AT_TI_end_column(0x01)
+	.dwattr $C$DW$10, DW_AT_TI_end_file("../FreeRTOS_TM4C1294_Base_Startup.c")
+	.dwattr $C$DW$10, DW_AT_TI_end_line(0x12a)
+	.dwattr $C$DW$10, DW_AT_TI_end_column(0x01)
 	.dwendentry
-	.dwendtag $C$DW$11
+	.dwendtag $C$DW$10
 
 ;*****************************************************************************
 ;* UNDEFINED EXTERNAL REFERENCES                                             *
@@ -418,7 +407,6 @@ IntDefaultHandler:
 	.global	xPortPendSVHandler
 	.global	vPortSVCHandler
 	.global	xPortSysTickHandler
-	.global	I2C7_IntServiceRoutine
 
 ;******************************************************************************
 ;* BUILD ATTRIBUTES                                                           *
@@ -461,8 +449,8 @@ $C$DW$T$23	.dwtag  DW_TAG_array_type
 	.dwattr $C$DW$T$23, DW_AT_type(*$C$DW$T$22)
 	.dwattr $C$DW$T$23, DW_AT_language(DW_LANG_C)
 	.dwattr $C$DW$T$23, DW_AT_byte_size(0x200)
-$C$DW$12	.dwtag  DW_TAG_subrange_type
-	.dwattr $C$DW$12, DW_AT_upper_bound(0x7f)
+$C$DW$11	.dwtag  DW_TAG_subrange_type
+	.dwattr $C$DW$11, DW_AT_upper_bound(0x7f)
 
 	.dwendtag $C$DW$T$23
 
@@ -705,8 +693,8 @@ $C$DW$T$47	.dwtag  DW_TAG_array_type
 	.dwattr $C$DW$T$47, DW_AT_type(*$C$DW$T$13)
 	.dwattr $C$DW$T$47, DW_AT_language(DW_LANG_C)
 	.dwattr $C$DW$T$47, DW_AT_byte_size(0x100)
-$C$DW$13	.dwtag  DW_TAG_subrange_type
-	.dwattr $C$DW$13, DW_AT_upper_bound(0x3f)
+$C$DW$12	.dwtag  DW_TAG_subrange_type
+	.dwattr $C$DW$12, DW_AT_upper_bound(0x3f)
 
 	.dwendtag $C$DW$T$47
 
@@ -803,15 +791,15 @@ $C$DW$T$18	.dwtag  DW_TAG_base_type
 $C$DW$T$19	.dwtag  DW_TAG_structure_type
 	.dwattr $C$DW$T$19, DW_AT_name("__va_list")
 	.dwattr $C$DW$T$19, DW_AT_byte_size(0x04)
-$C$DW$14	.dwtag  DW_TAG_member
-	.dwattr $C$DW$14, DW_AT_type(*$C$DW$T$3)
-	.dwattr $C$DW$14, DW_AT_name("__ap")
-	.dwattr $C$DW$14, DW_AT_TI_symbol_name("__ap")
-	.dwattr $C$DW$14, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
-	.dwattr $C$DW$14, DW_AT_accessibility(DW_ACCESS_public)
-	.dwattr $C$DW$14, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include/stdarg.h")
-	.dwattr $C$DW$14, DW_AT_decl_line(0x38)
-	.dwattr $C$DW$14, DW_AT_decl_column(0x0c)
+$C$DW$13	.dwtag  DW_TAG_member
+	.dwattr $C$DW$13, DW_AT_type(*$C$DW$T$3)
+	.dwattr $C$DW$13, DW_AT_name("__ap")
+	.dwattr $C$DW$13, DW_AT_TI_symbol_name("__ap")
+	.dwattr $C$DW$13, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+	.dwattr $C$DW$13, DW_AT_accessibility(DW_ACCESS_public)
+	.dwattr $C$DW$13, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include/stdarg.h")
+	.dwattr $C$DW$13, DW_AT_decl_line(0x38)
+	.dwattr $C$DW$13, DW_AT_decl_column(0x0c)
 
 	.dwattr $C$DW$T$19, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include/stdarg.h")
 	.dwattr $C$DW$T$19, DW_AT_decl_line(0x37)

@@ -4,12 +4,12 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-F:/eecs690/TI_ARM_Tiva_Projects/Source/croutine.c \
-F:/eecs690/TI_ARM_Tiva_Projects/Source/event_groups.c \
-F:/eecs690/TI_ARM_Tiva_Projects/Source/list.c \
-F:/eecs690/TI_ARM_Tiva_Projects/Source/queue.c \
-F:/eecs690/TI_ARM_Tiva_Projects/Source/tasks.c \
-F:/eecs690/TI_ARM_Tiva_Projects/Source/timers.c 
+C:/TI_ARM_Tiva_Projects/Source/croutine.c \
+C:/TI_ARM_Tiva_Projects/Source/event_groups.c \
+C:/TI_ARM_Tiva_Projects/Source/list.c \
+C:/TI_ARM_Tiva_Projects/Source/queue.c \
+C:/TI_ARM_Tiva_Projects/Source/tasks.c \
+C:/TI_ARM_Tiva_Projects/Source/timers.c 
 
 OBJS += \
 ./Source/croutine.obj \
@@ -44,11 +44,11 @@ OBJS__QUOTED += \
 "Source\timers.obj" 
 
 C_SRCS__QUOTED += \
-"F:/eecs690/TI_ARM_Tiva_Projects/Source/croutine.c" \
-"F:/eecs690/TI_ARM_Tiva_Projects/Source/event_groups.c" \
-"F:/eecs690/TI_ARM_Tiva_Projects/Source/list.c" \
-"F:/eecs690/TI_ARM_Tiva_Projects/Source/queue.c" \
-"F:/eecs690/TI_ARM_Tiva_Projects/Source/tasks.c" \
-"F:/eecs690/TI_ARM_Tiva_Projects/Source/timers.c" 
+"C:/TI_ARM_Tiva_Projects/Source/croutine.c" \
+"C:/TI_ARM_Tiva_Projects/Source/event_groups.c" \
+"C:/TI_ARM_Tiva_Projects/Source/list.c" \
+"C:/TI_ARM_Tiva_Projects/Source/queue.c" \
+"C:/TI_ARM_Tiva_Projects/Source/tasks.c" \
+"C:/TI_ARM_Tiva_Projects/Source/timers.c" 
 
 

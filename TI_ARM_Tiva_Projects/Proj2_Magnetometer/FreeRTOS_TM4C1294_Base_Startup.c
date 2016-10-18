@@ -60,7 +60,7 @@ extern void vPortSVCHandler(void);
 extern void xPortSysTickHandler(void);
 extern void vEMAC_ISR(void);
 
-extern void I2C7_IntServiceRoutine(void);
+//extern void I2C7_IntServiceRoutine(void);
 
 //extern void SaveGeneralRegisters();
 //extern void SaveFloatingPointRegisters();
@@ -218,7 +218,7 @@ void (* const g_pfnVectors[])(void) =
 		IntDefaultHandler,// Timer 7 subtimer A
 		IntDefaultHandler,// Timer 7 subtimer B
 		IntDefaultHandler,// I2C6 Master and Slave
-		I2C7_IntServiceRoutine,// I2C7 Master and Slave
+		IntDefaultHandler,// I2C7 Master and Slave
 		IntDefaultHandler,// HIM Scan Matrix Keyboard 0
 		IntDefaultHandler,// One Wire 0
 		IntDefaultHandler,// HIM PS/2 0

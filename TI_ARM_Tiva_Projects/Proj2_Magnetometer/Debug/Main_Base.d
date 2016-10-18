@@ -30,6 +30,7 @@ Main_Base.obj: C:/TI_ARM_Tiva_Projects/Source/include/deprecated_definitions.h
 Main_Base.obj: C:/TI_ARM_Tiva_Projects/Source/include/mpu_wrappers.h
 Main_Base.obj: C:/TI_ARM_Tiva_Projects/Source/include/task.h
 Main_Base.obj: C:/TI_ARM_Tiva_Projects/Source/include/list.h
+Main_Base.obj: ../Tasks/Magnetometer.h
 Main_Base.obj: C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include/stdio.h
 Main_Base.obj: C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include/linkage.h
 Main_Base.obj: C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include/stdarg.h
@@ -64,6 +65,7 @@ C:/TI_ARM_Tiva_Projects/Source/include/deprecated_definitions.h:
 C:/TI_ARM_Tiva_Projects/Source/include/mpu_wrappers.h: 
 C:/TI_ARM_Tiva_Projects/Source/include/task.h: 
 C:/TI_ARM_Tiva_Projects/Source/include/list.h: 
+../Tasks/Magnetometer.h: 
 C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include/stdio.h: 
 C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include/linkage.h: 
 C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.LTS/include/stdarg.h: 

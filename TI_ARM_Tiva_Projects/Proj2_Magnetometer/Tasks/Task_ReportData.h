@@ -1,13 +1,3 @@
-/*--Task_ReportData.h
- *
- *  Author:			Gary J. Minden
- *	Organization:	KU/EECS/EECS 690
- *  Date:			March 13, 2016 (B60313)
- *
- *  Description:	Transmits data via UART to PC.
- *
- */
-
 #ifndef TASKS_TASK_REPORTDATA_H_
 #define TASKS_TASK_REPORTDATA_H_
 
@@ -42,8 +32,11 @@ extern QueueHandle_t ReportData_Queue;
 typedef struct ReportData_Item {	uint32_t	TimeStamp;
 									uint32_t	ReportName;
 									uint32_t	ReportValue_0;
-									uint32_t	ReportValue_1; } ReportData_Item;
+									uint32_t	ReportValue_1;
+									uint32_t	ReportValue_2;
+									uint32_t	ReportValue_3; } ReportData_Item;
 
 typedef enum ReportData_OutputFormat { Excel_CSV, Mathematica_List } ReportData_OutputFormat;
 
 #endif /* TASKS_TASK_REPORTDATA_H_ */
+

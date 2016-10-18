@@ -6,6 +6,9 @@
  *
  *  Description:	Transmits data via UART to PC.
  *
+ *  Modification:	2016-09-22 (B60922)
+ *  				Changed number of value to 4 from 2.
+ *
  */
 
 #include	<stddef.h>
@@ -64,18 +67,20 @@ extern void Task_ReportData( void *pvParameters ) {
 				//	Output in Excel Comma Separated format
 				//
 				case Excel_CSV:
-					UARTprintf( "%08d,%02d,%d,%d\n",
+					UARTprintf( "%08d,%02d,%d,%d,%d,%d\n",
 								theReport.TimeStamp, theReport.ReportName,
-								theReport.ReportValue_0, theReport.ReportValue_1 );
+								theReport.ReportValue_0, theReport.ReportValue_1,
+								theReport.ReportValue_2, theReport.ReportValue_3);
 					break;
 
 				//
 				//	Output in Mathematica List format
 				//
 				case Mathematica_List:
-					UARTprintf( "{ %08d, %02d, %d, %d },\n",
+					UARTprintf( "{ %08d, %02d, %d, %d, %d, %d },\n",
 								theReport.TimeStamp, theReport.ReportName,
-								theReport.ReportValue_0, theReport.ReportValue_1 );
+								theReport.ReportValue_0, theReport.ReportValue_1,
+								theReport.ReportValue_2, theReport.ReportValue_3 );
 
 					break;
 			}
@@ -83,3 +88,4 @@ extern void Task_ReportData( void *pvParameters ) {
 
 	}
 }
+
